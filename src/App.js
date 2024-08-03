@@ -13,11 +13,14 @@ const App = () => {
     { name: 'Гарри Поттер и Орден Феникса', author: 'Джоан Роулинг', year: '2003', img: './product/5.jpg', price: '1500', href: '#', id: 5 },
     { name: 'Гарри Поттер и Принц-полукровка', author: 'Джоан Роулинг', year: '2005', img: './product/6.jpg', price: '1000', href: '#', id: 6 },
     { name: 'Гарри Поттер и Дары Смерти', author: 'Джоан Роулинг', year: '2007', img: './product/7.jpg', price: '1400', href: '#', id: 7 }])
-
+  let filterArr = products.filter(product => {
+    const regex = new RegExp(value, 'gi');
+    return product.name.match(regex);
+  });
   return (<div>
-    <Input products={products} setProducts={setProducts} value={value} setValue={setValue} />
+    <Input products={products} setProducts={setProducts} value={value} setValue={setValue} filterArr={filterArr} />
     <Filter products={products} setProducts={setProducts} />
-    <Products products={products} setProducts={setProducts} value={value} setValue={setValue} />
+    <Products products={products} setProducts={setProducts} value={value} setValue={setValue} filterArr={filterArr} />
 
   </div>
   )

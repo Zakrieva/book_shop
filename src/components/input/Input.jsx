@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
 
-const Input = ({ products, setProducts, value, setValue }) => {
-
+const Input = ({ products, setProducts, value, setValue, filterArr }) => {
 
     const searchBook = () => {
-        let filterArr = products.filter(product => {
-            const regex = new RegExp(value, 'gi');
-            return product.name.match(regex);
-        });
         setProducts(filterArr);
     };
 
