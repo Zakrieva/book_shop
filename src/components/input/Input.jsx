@@ -1,22 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Input = ({ products }) => {
+const Input = ({ products, setProducts, value, setValue }) => {
+
 
     const searchBook = () => {
-        products.map((name === name.products))
-    }
+        let filterArr = products.filter(product => {
+            const regex = new RegExp(value, 'gi');
+            return product.name.match(regex);
+        });
+        setProducts(filterArr);
+    };
+
+    useEffect(() => {
+        searchBook()
+        setProducts(products)
+    }, [products]);
+
 
     return (
         <header>
-            <form action="">
-                <input type="text"
+            <div>
+                <input
+                    type="text"
                     placeholder="Название книги"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)} />
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                />
                 <button onClick={searchBook}>Поиск</button>
-            </form>
+            </div>
             <div className="shopLogo">Harry Potter</div>
-        </header>)
-}
+        </header>
+    );
+};
 
 export default Input;
