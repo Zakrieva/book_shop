@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Harry";
+  src: url(./Harry\ Potter.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +14,103 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  margin: 0 auto;
+  width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+input {
+  width: 240px;
+  height: 30px;
+  margin: 20px 5px 20px 20px;
+
+}
+
+button {
+  height: 35px;
+  margin-right: 10px;
+}
+
+.filter__buttons {
+  display: flex;
+  margin: 0 auto;
+  width: 1140px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopLogo {
+  margin-right: 20px;
+  font-size: 55px;
+  font-family: 'Harry';
+}
+
+
+.menuItems a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-item {
+  width: 220px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 2px solid #9a8f8f;
+  background: white;
+  transition: .4s ease-in-out;
+}
+
+.product-item img {
+  display: block;
+  width: 100%;
+}
+
+.product-list {
+  background: #fafafa;
+  padding: 10px 0;
+}
+
+
+
+.product-list a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: #4d4848;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  color: #000000;
+  display: block;
+}
+
+.product-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1140px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer {
+  width: 1140px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
