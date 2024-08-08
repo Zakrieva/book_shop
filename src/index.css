@@ -114,3 +114,33 @@ footer {
   justify-content: space-between;
 
 }
+
+.product-list img {
+  height: 22px;
+  width: 22px;
+}
+
+.product-score {
+  font-size: 18px;
+  gap: 10px;
+  justify-content: center;
+  display: flex;
+}
+
+
+.score {
+  height: 25px;
+  margin-top: 10px;
+  gap: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.star1:hover,
+.star2:hover,
+.star3:hover,
+.star4:hover,
+.star5:hover {
+  width: 25px;
+  height: 25px;
+}

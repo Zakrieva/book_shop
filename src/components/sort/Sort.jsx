@@ -1,6 +1,6 @@
 
 
-const Filter = ({ products, setProducts }) => {
+const Sort = ({ products, setProducts }) => {
     const priceLower = () => {
         const priceLowerArr = JSON.parse(JSON.stringify(products))
         priceLowerArr.sort((a, b) => a.price > b.price ? -1 : 1)
@@ -18,4 +18,4 @@ const Filter = ({ products, setProducts }) => {
         </div>
     )
 }
-export default Filter;
+export default Sort;
