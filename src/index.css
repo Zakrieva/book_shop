@@ -144,3 +144,7 @@ footer {
   width: 25px;
   height: 25px;
 }
+
+.none {
+  display: none;
+}

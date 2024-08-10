@@ -1,11 +1,10 @@
 import { useState } from "react"
-const Product = ({ name, img, price, href, id, author, year, star, setStar }) => {
+const Product = ({ name, img, price, href, id, author, year, star }) => {
 
     const getScore = (starNum) => {
-        let starScore = [star]
-        starScore.push(starNum)
-        setStar(starNum + star / 2)
+        star = starNum
     }
+
     return (
         <div className="product-item" key={id} >
             <div className="product-item-img">
